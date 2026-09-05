@@ -1,12 +1,10 @@
-import type { HubService } from '../data/services'
+import type { Service } from '../data/services'
 
 type Props = {
-  active: HubService
+  active: Service
 }
 
 export function ServicePanel({ active }: Props) {
-  const canEmbed = active.embeddable
-
   return (
     <section className="panel" aria-labelledby="panel-title">
       <header className="panel__header">
@@ -33,7 +31,7 @@ export function ServicePanel({ active }: Props) {
       </header>
 
       <div className="panel__body">
-        {canEmbed ? (
+        {active.embeddable ? (
           <iframe
             key={active.id}
             className="panel__frame"

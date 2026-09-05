@@ -1,17 +1,14 @@
 import { Navigate, Route, Routes, useParams } from 'react-router-dom'
 import { Sidebar } from './components/Sidebar'
 import { ServicePanel } from './components/ServicePanel'
-import {
-  defaultService,
-  getServiceBySlug,
-} from './data/services'
+import { defaultService, getServiceById } from './data/services'
 
 function HubRoute() {
-  const { serviceSlug } = useParams()
-  const active = getServiceBySlug(serviceSlug ?? '') ?? defaultService
+  const { serviceId } = useParams()
+  const active = getServiceById(serviceId ?? '') ?? defaultService
 
-  if (serviceSlug !== active.slug) {
-    return <Navigate to={`/${active.slug}`} replace />
+  if (serviceId !== active.id) {
+    return <Navigate to={`/${active.id}`} replace />
   }
 
   return <ServicePanel active={active} />
@@ -25,9 +22,9 @@ export default function App() {
         <Routes>
           <Route
             path="/"
-            element={<Navigate to={`/${defaultService.slug}`} replace />}
+            element={<Navigate to={`/${defaultService.id}`} replace />}
           />
-          <Route path="/:serviceSlug" element={<HubRoute />} />
+          <Route path="/:serviceId" element={<HubRoute />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

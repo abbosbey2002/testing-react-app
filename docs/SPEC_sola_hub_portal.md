@@ -29,21 +29,11 @@ flowchart LR
 
 ## Маълумот модели
 
-Файл: `src/data/services.ts` — **ҳар бир URL алоҳида сайдбар банди** (11 та).
+`src/data/services.ts` — `CATEGORIES` + `SERVICES` (categoryId боғланиши).
 
-| # | Ном | URL |
-|---|-----|-----|
-| 1 | ERP | `http://erp.awg.lan/login.php` |
-| 2 | StatisticWeb | `http://erp.awg.lan/StatisticWeb/main.php` |
-| 3 | Jira | `https://it.sola.uz/jira/secure/Dashboard.jspa` |
-| 4 | Portal 2022 | `http://portal-2022.sola.uz/dashboard` |
-| 5 | Portal 2027 | `https://portal-2027.sola.uz` |
-| 6 | Отчёты | `http://rep.awg.lan` |
-| 7 | CRM | `https://solauzbekistan.amocrm.ru` |
-| 8 | 172.18.0.241 | `https://172.18.0.241` |
-| 9 | Real-time | `http://172.18.0.17/real-time/index` |
-| 10 | Dealer | `https://dealer.sola.uz/login.php` |
-| 11 | Почта | `https://mail.sola.uz` |
+Категориялар: CRM, ERP, Биллинг, Jira, Отчёты, Почта, База знаний (Lucide иконкалар).
+
+Сервислар (11 URL): amoCRM, ERP login/stat, Dealer, Portal 2022/2027, Jira, AWG Reports, Node 241, Real-time, Sola Mail.
 
 `embeddable`: LAN HTTP — `true`; HTTPS SaaS — `false`.
 

@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { getSortedServices } from '../data/services'
-import { ServiceGlyph } from './ServiceGlyph'
+import { ServiceIcon } from './ServiceIcon'
 
 export function Sidebar() {
   return (
@@ -9,13 +9,13 @@ export function Sidebar() {
         {getSortedServices().map((service) => (
           <li key={service.id}>
             <NavLink
-              to={`/${service.slug}`}
+              to={`/${service.id}`}
               className={({ isActive }) =>
                 isActive ? 'sidebar__item sidebar__item--active' : 'sidebar__item'
               }
               title={service.url}
             >
-              <ServiceGlyph name={service.icon} className="sidebar__icon" />
+              <ServiceIcon name={service.icon} className="sidebar__icon" />
               <span className="sidebar__label">{service.title}</span>
             </NavLink>
           </li>

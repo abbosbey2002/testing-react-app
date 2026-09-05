@@ -21,3 +21,7 @@ npm run build
 ## Хавфсизлик эслатма
 
 MVP да логин йўқ. URL лар `src/data/services.ts` да. Роли — кейинги итерация.
+
+## HTTP / iframe блоклар
+
+Қаранг: [`HTTP_IFRAME_WORKAROUNDS.md`](HTTP_IFRAME_WORKAROUNDS.md) — mixed content, X-Frame-Options, nginx reverse proxy.
