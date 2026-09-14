@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
   {
     id: 'portal-2027',
     title: 'Sola Premium',
-    url: 'https://portal-2027.sola.uz',
+    url: 'https://portal-2027.sola.uz/dashboard/daily-stats',
     description: 'Sola Premium (статистика)',
     embeddable: false,
     sort: 5,
